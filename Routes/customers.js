@@ -1,5 +1,5 @@
 const express = require('express');
-const moongose = require('mongoose');
+const mongose = require('mongoose');
 const router = express.Router();
 const Customer = require('../models/Customer');
 
@@ -13,7 +13,8 @@ router.get('/get', async(req, res) => {
 });
 
 router.post('/post', async(req, res) => {
-    console.log(req.body);
+    
+    
     const customer = new Customer({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
