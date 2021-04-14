@@ -1,4 +1,4 @@
-//Imports
+
 const express = require('express');
 const mongoose = require('mongoose');
 const postRoutes = require('./routes/customers');
@@ -7,10 +7,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
-//Uso de las rutas
-app.use('/customers', postRoutes);
 
-//Conectado a MOngo
+app.use('/access/customers', postRoutes);
+
+
 mongoose.connect(
     "mongodb://localhost/usuarios", { useNewUrlParser: true },
     (err, res) => {
