@@ -14,7 +14,6 @@ router.get('/get', async(req, res) => {
 
 router.post('/post', async(req, res) => {
     
-    
     const customer = new Customer({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
